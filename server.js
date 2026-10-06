@@ -47,7 +47,7 @@ app.post('/api/pay-room', async (req, res) => {
 });
 
 // 2. Host Escrow Payout (Send Money to Host M-Pesa)
-app.post('/api/host-withdraw', async (req, res) => {
+app.post('/paystack/stkpush', async (req, res) => { ... });
   const { hostPhone, amount, hostName } = req.body;
 
   let formattedPhone = hostPhone.replace(/[^0-9]/g, '');
